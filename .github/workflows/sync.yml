@@ -2,7 +2,7 @@ name: Sync Files
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 jobs:
   sync:
@@ -15,3 +15,5 @@ jobs:
         with:
           GH_PAT: ${{ secrets.PAT }}
           SKIP_PR: true
+          PR_LABELS: false
+  
